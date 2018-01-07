@@ -1,0 +1,22 @@
+{
+  "name": "web-accessibility",
+  "version": "1.0.0",
+  "description": "Web Accessibility Tutorial",
+  "main": "index.js",
+  "repository": "git@github.com:ruiixu23/web-accessibility.git",
+  "author": "Ruifeng Xu",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.28.8",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.3",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
+  }
+}
