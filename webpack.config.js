@@ -17,8 +17,8 @@ module.exports = {
     },
     output: {
         filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'dist', 'assets'),
-        publicPath: '/assets/',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
     },
     module: {
         rules: [{
@@ -45,7 +45,7 @@ module.exports = {
             filename: 'css/[name].css',
         }),
         new HtmlWebpackPlugin({
-            filename: '../index.html',
+            filename: 'index.html',
             template: 'index.html',
             inject: true,
             chunks: ['vendors', 'common', 'index'],
