@@ -14,6 +14,7 @@ module.exports = {
         vendors: './js/vendors.js',
         common: './js/common.js',
         index: './js/index.js',
+        login: './js/login.js',
     },
     output: {
         filename: 'js/[name].js',
@@ -49,6 +50,12 @@ module.exports = {
             template: 'index.html',
             inject: true,
             chunks: ['vendors', 'common', 'index'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: 'login.html',
+            inject: true,
+            chunks: ['vendors', 'common', 'login'],
         }),
     ],
 };

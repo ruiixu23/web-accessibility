@@ -1,22 +1,3 @@
-main {
-  section {
-    h2 {
-      font-size: 2rem;
-      font-weight: 100;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-    }
-  }
-
-  .studies, .researches {
-    li {
-      margin-top: 1.2rem;
-    }
-  }
-}
-
 .news {
   .media {
     border-bottom: 1px solid #9e9e9e;
@@ -24,5 +5,12 @@ main {
     img {
       width: 5rem;
     }
+  }
+}
+
+.studies,
+.researches {
+  li {
+    margin-top: 1.2rem;
   }
 }
