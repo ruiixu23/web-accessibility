@@ -14,8 +14,9 @@
             <div class="media">
                 <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="University logo">
                 <div class="media-body align-self-center">
-                    <h1 class="mb-0 title">Lorem Ipsum
-                        <br>Institute of Technology</h1>
+                    <div class="mb-0 title">Lorem Ipsum
+                        <br>Institute of Technology
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,34 +45,63 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-houses" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Faculties</a>
-                            <div class="dropdown-menu" aria-labelledby="nav-bar-houses">
-                                <a class="dropdown-item" href="#">Applied sciences</a>
-                                <a class="dropdown-item" href="#">Architecture &amp; planning</a>
-                                <a class="dropdown-item" href="#">Construction &amp; environment</a>
-                                <a class="dropdown-item" href="#">Design</a>
-                                <a class="dropdown-item" href="#">Engineering</a>
-                                <a class="dropdown-item" href="#">Health &amp; social sciences</a>
-                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="nav-bar-houses">
+                                <li>
+                                    <a class="dropdown-item" href="#">Applied sciences</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Architecture &amp; planning</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Construction &amp; environment</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Design</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Engineering</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Health &amp; social sciences</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-houses" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Education &amp; research</a>
-                            <div class="dropdown-menu" aria-labelledby="nav-bar-houses">
-                                <a class="dropdown-item" href="#">Overview</a>
-                                <a class="dropdown-item" href="#">Bachelor</a>
-                                <a class="dropdown-item" href="#">Master</a>
-                                <a class="dropdown-item" href="#">Continuing education</a>
-                                <a class="dropdown-item" href="#">Doctorate</a>
-                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="nav-bar-houses">
+                                <li>
+                                    <a class="dropdown-item" href="#">Overview</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="#">Bachelor</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Master</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Continuing education</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Doctorate</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-express" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Industry &amp; partners</a>
-                            <div class="dropdown-menu" aria-labelledby="nav-bar-express">
-                                <a class="dropdown-item" href="#">Public relations</a>
-                                <a class="dropdown-item" href="#">Commercialization</a>
-                                <a class="dropdown-item" href="#">Sponsors &amp; partners</a>
-                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="nav-bar-express">
+                                <li>
+                                    <a class="dropdown-item" href="#">Public relations</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Commercialization</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Sponsors &amp; partners</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                     <ur class="navbar-nav">
@@ -84,51 +114,62 @@
         </div>
     </nav>
 
-    <main class="container mb-4 main">
+    <main class="container mt-4 main">
         <div class="row no-gutters">
-            <section class="col-12 col-lg-6 news">
-                <div class="p-4 mt-3 mr-lg-3 bg-white">
-                    <h2 class="text-primary mb-4">News &amp; events</h2>
-                    <ul class="list-unstyled">
-                        <li class="media mt-4">
-                            <img class="my-1 mr-2 rounded-right" src="./img/server-farm.jpg" alt="Photo of a server farm">
-                            <div class="media-body">
-                                <h3 class="text-info mt-0 mb-2">
-                                    <a href="#"> Respondeat totidem verbis</a>
-                                </h3>
+            <div class="col-12 col-lg-6">
+                <section class="p-4 mr-lg-3 bg-white news">
+                    <h1 class="text-primary mb-4">News &amp; events</h1>
+                    <article class="media mt-4">
+                        <img class="my-1 mr-2 rounded-right" src="./img/server-farm.jpg" alt="Photo of a server farm">
+                        <div class="media-body">
+                            <h2 class="text-info mt-0 mb-2">
+                                <a href="#"> Respondeat totidem verbis</a>
+                            </h2>
+                            <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. An me, inquam, nisi te audire vellem, censes haec dicturum fuisse?
                                 Quid est, quod ab ea absolvi et perfici debeat?
-                                <div class="my-3 text-secondary text-right date">2018/01/15</div>
+                            </p>
+                            <div class="my-3 text-secondary text-right">
+                                <time datetime="2018-01-15">2018/01/15</time>
                             </div>
-                        </li>
-                        <li class="media mt-4">
-                            <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg" alt="Photo of a galaxy">
-                            <div class="media-body">
-                                <h3 class="text-info mt-0 mb-2">
-                                    <a href="#">At iam decimum annum in spelunca iacet</a>
-                                </h3>
+                        </div>
+                    </article>
+                    <article class="media mt-4">
+                        <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg" alt="Photo of a galaxy">
+                        <div class="media-body">
+                            <h2 class="text-info mt-0 mb-2">
+                                <a href="#">At iam decimum annum in spelunca iacet</a>
+                            </h2>
+                            <p>
                                 Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero satis. Claudii libidini, qui tum erat summo ne imperio,
                                 dederetur. Ergo id est convenienter naturae vivere, a natura discedere.
-                                <div class="my-3 text-secondary text-right date">2018/01/02</div>
+                            </p>
+                            <div class="my-3 text-secondary text-right">
+                                <time datetime="2018-01-12">2018/01/12</time>
                             </div>
-                        </li>
-                        <li class="media mt-4">
-                            <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg" alt="Photo of a robot">
-                            <div class="media-body">
-                                <h3 class="text-info mt-0 mb-2">
-                                    <a href="#">Quo plebiscito decreta a senatu est consuli quaestio Cn</a>
-                                </h3>
+                        </div>
+                    </article>
+                    <article class="media mt-4">
+                        <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg" alt="Photo of a robot">
+                        <div class="media-body">
+                            <h2 class="text-info mt-0 mb-2">
+                                <a href="#">Quo plebiscito decreta a senatu est consuli quaestio Cn</a>
+                            </h2>
+                            <p>
                                 Comprehensum, quod cognitum non habet? Quia nec honesto quic quam honestius nec turpi turpius. Maximeque eos videre possumus
-                                res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute.
-                                <div class="my-3 text-secondary text-right date">2017/12/30</div>
+                                res gestas audire et legere velle, qui a spe gerendi absunt confecti senectute. Est enim
+                                effectrix multarum et magnarum voluptatum.
+                            </p>
+                            <div class="my-3 text-secondary text-right">
+                                <time datetime="2017-12-30">2017/12/30</time>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                        </div>
+                    </article>
+                </section>
+            </div>
             <div class="col-12 col-lg-6">
-                <section class="p-4 mt-3 bg-white studies">
-                    <h2 class="text-primary mb-4">Studies</h2>
+                <section class="p-4 mt-4 mt-lg-0 bg-white studies">
+                    <h1 class="text-primary mb-4">Studies</h1>
                     <p class="font-weight-bold">Advance your scientific education</p>
                     <ul class="list-unstyled ml-3">
                         <li>
@@ -143,8 +184,8 @@
                     </ul>
                 </section>
 
-                <section class="p-4 mt-3 bg-white researches">
-                    <h2 class="text-primary mb-4">Researches</h2>
+                <section class="p-4 mt-4 bg-white researches">
+                    <h1 class="text-primary mb-4">Researches</h1>
                     <p class="font-weight-bold">Join our renowned research groups</p>
                     <p class="ml-3">
                         <a href="#">Doctorial programmes</a>
@@ -164,15 +205,17 @@
                             <a href="#">Nec enim figura corporis nec ratio excellens ingenii humani significat ad unam hanc rem natum
                                 hominem, ut frueretur voluptatibus</a>
                         </li>
+                        <li>
+                            <a href="#">Atque haec ita iustitiae propria sunt, ut sint virtutum reliquarum communia</a>
+                        </li>
                     </ul>
-
                 </section>
             </div>
         </div>
     </main>
 
-    <footer class="container-fluid bg-dark footer">
-        <div class="container text-center py-3">
+    <footer class="container-fluid bg-dark mt-4 footer">
+        <div class="container text-center py-4">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="#">About</a>
                 <a class="col-12 col-md mr-3 text-white" href="#">Contact us</a>
