@@ -15,8 +15,14 @@ body {
   }
 }
 
+.header,
+.nav,
+.footer {
+  flex: 0 0 auto;
+}
+
 .main {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 
   h1 {
     font-size: 2rem;
