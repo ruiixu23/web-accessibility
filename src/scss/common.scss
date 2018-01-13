@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 .header {
   .logo {
     height: 3.5rem;
@@ -11,6 +16,8 @@
 }
 
 .main {
+  flex: 1 1 auto;
+
   h1 {
     font-size: 2rem;
     font-weight: 100;
