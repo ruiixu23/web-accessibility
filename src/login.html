@@ -113,16 +113,20 @@
                     <form>
                         <div class="form-group">
                             <label for="login-email">Email address</label>
-                            <input type="email" class="form-control" id="login-email" placeholder="Enter email">
+                            <input class="form-control" id="login-email" type="email" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="login-password">Password</label>
-                            <input type="password" class="form-control" id="login-password" placeholder="Enter password">
+                            <input class="form-control" id="login-password" type="password" placeholder="Enter password">
                         </div>
-                        <div class="form-row justify-content-between align-items-center">
-                            <button type="submit" class="btn btn-primary">Login</button>
-                            <a class="text-danger ml-auto" href="#">Forget password</a>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber">
+                                <label class="form-check-label" for="login-remmeber">Keep me logged in</label>
+                            </div>
                         </div>
+                        <button class="btn btn-primary" type="submit">Login</button>
+                        <button class="btn btn-link text-danger ml-3">Forget password</button>
                     </form>
                 </div>
             </section>
@@ -133,40 +137,48 @@
                         <div class="form-row">
                             <div class="form-group col-12 col-lg-6">
                                 <label for="register-first-name">First name</label>
-                                <input type="text" class="form-control" id="register-first-name" placeholder="Enter first name">
+                                <input class="form-control" type="text" id="register-first-name" placeholder="Enter first name">
                             </div>
                             <div class="form-group col-12 col-lg-6">
                                 <label for="register-last-name">Last name</label>
-                                <input type="text" class="form-control" id="register-last-name" placeholder="Enter last name">
+                                <input class="form-control" type="text" id="register-last-name" placeholder="Enter last name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="register-email">Email address</label>
-                            <input type="email" class="form-control" id="register-email" placeholder="Enter email">
+                            <input class="form-control" id="register-email" type="email" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="register-password">Password</label>
-                            <input type="password" class="form-control" id="register-password" placeholder="Enter password">
+                            <input class="form-control" id="register-password" type="password" placeholder="Enter password">
                         </div>
                         <div class="form-group">
                             <label for="register-address">Address</label>
-                            <input type="text" class="form-control" id="register-addresss" placeholder="Enter address">
+                            <input class="form-control" id="register-address" type="text" placeholder="Enter address">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12 col-lg-6">
                                 <label for="register-city">City</label>
-                                <input type="text" class="form-control" id="register-city" placeholder="Enter city">
+                                <input class="form-control" id="register-city" type="text" placeholder="Enter city">
                             </div>
                             <div class="form-group col-12 col-lg-4">
                                 <label for="register-state">State</label>
-                                <input type="text" class="form-control" id="register-state" placeholder="Enter state">
+                                <input class="form-control" id="register-state" type="text" placeholder="Enter state">
                             </div>
                             <div class="form-group col-12 col-lg-2">
                                 <label for="register-zip">Zip</label>
-                                <input type="text" class="form-control" id="register-zip" placeholder="Enter zip">
+                                <input class="form-control" id="register-zip" type="text" placeholder="Enter zip">
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Register</button>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="agreement" id="register-agreement">
+                                <label class="form-check-label" for="register-agreement">I agree with the
+                                    <a href="/empty.html?title=Terms+of+services">terms of services</a> and the
+                                    <a href="/empty.html?title=Privacy+policy">privacy policy</a>.</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Register</button>
                     </form>
                 </div>
             </section>
@@ -176,15 +188,14 @@
     <footer class="container-fluid bg-dark mt-4 footer">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
-                <a class="col-12 col-md mr-3 text-white" href="#">About</a>
-                <a class="col-12 col-md mr-3 text-white" href="#">Contact us</a>
-                <a class="col-12 col-md mr-3 text-white" href="#">Help</a>
-                <a class="col-12 col-md mr-3 text-white" href="#">Terms of service</a>
-                <a class="col-12 col-md mr-3 text-white" href="#">Privacy policy</a>
+                <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=About">About</a>
+                <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=Contact+us">Contact us</a>
+                <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=Help">Help</a>
+                <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=Terms+of+services">Terms of service</a>
+                <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=Privacy+policy">Privacy policy</a>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
