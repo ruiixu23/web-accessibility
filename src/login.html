@@ -107,14 +107,16 @@
             <section class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
                     <h1 class="text-primary mb-4">Login</h1>
-                    <form id="login-form">
+                    <form id="login-form" novalidate>
                         <div class="form-group">
                             <label for="login-email-control">Email</label>
                             <input class="form-control" id="login-email-control" type="email" placeholder="Email" required aria-required="true">
+                            <small class="invalid-feedback" aria-live="polite"></small>
                         </div>
                         <div class="form-group">
                             <label for="login-password-control">Password</label>
                             <input class="form-control" id="login-password-control" type="password" placeholder="Password">
+                            <small class="invalid-feedback" aria-live="polite"></small>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -123,7 +125,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
-                        <button class="btn btn-link text-danger ml-3" id="login-forogt-button" type="button">Forgot password</button>
+                        <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button">Forgot password</button>
                     </form>
                 </div>
             </section>
@@ -131,11 +133,9 @@
             <section class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
                     <h1 class="text-primary mb-4">Create new account</h1>
-                    <form id="register-form">
+                    <form id="register-form" novalidate>
                         <fieldset class="form-group" role="group" aria-labelledby="register-basic-legend">
-                            <legend class="form-label" id="register-basic-legend">Basic information
-                                <small class="text-secondary">(required)</small>
-                            </legend>
+                            <legend class="form-label" id="register-basic-legend">Required information</legend>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="register-first-name-control">First name
@@ -162,7 +162,7 @@
                                 </label>
                                 <input class="form-control" id="register-password-control" type="password" placeholder="Password" required aria-required="true"
                                     aria-describedby="register-password-help">
-                                <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain letters and numbers.</small>
+                                <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
                                 <label for="register-programme-control">Programme</label>
@@ -176,9 +176,7 @@
                             </div>
                         </fieldset>
                         <fieldset class="form-group" role="group" aria-labelledby="register-address-legend">
-                            <legend class="form-label" id="register-address-legend">Address information
-                                <small class="text-secondary">(optional)</small>
-                            </legend>
+                            <legend class="form-label" id="register-address-legend">Additional information</legend>
                             <div class="form-group">
                                 <label for="register-street-control">Street
                                     <small class="text-secondary sr-only">(optional)</small>
