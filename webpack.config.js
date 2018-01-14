@@ -11,7 +11,7 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     context: path.resolve(__dirname, 'src'),
     entry: {
-        vendors: './js/vendors.js',
+        vendor: './js/vendor.js',
         common: './js/common.js',
         index: './js/index.js',
         login: './js/login.js',
@@ -43,6 +43,11 @@ module.exports = {
         }],
     },
     plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'js/vendor.js',
+            minChunks: 3,
+        }),
         new ExtractTextPlugin({
             filename: 'css/[name].css',
         }),
@@ -50,19 +55,19 @@ module.exports = {
             filename: 'index.html',
             template: 'index.html',
             inject: true,
-            chunks: ['vendors', 'common', 'index'],
+            chunks: ['vendor', 'common', 'index'],
         }),
         new HtmlWebpackPlugin({
             filename: 'login.html',
             template: 'login.html',
             inject: true,
-            chunks: ['vendors', 'common', 'login'],
+            chunks: ['vendor', 'common', 'login'],
         }),
         new HtmlWebpackPlugin({
             filename: 'empty.html',
             template: 'empty.html',
             inject: true,
-            chunks: ['vendors', 'common', 'empty'],
+            chunks: ['vendor', 'common', 'empty'],
         }),
     ],
 };

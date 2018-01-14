@@ -8,12 +8,16 @@ import '../scss/empty.scss';
  */
 function getUrlParameter(name) {
     name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
+    let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    let results = regex.exec(location.search);
+    if (results == null) {
+        return '';
+    } else {
+        return decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+}
 
 $(document).ready(function() {
     $('#title-placeholder').text(getUrlParameter('title'));
-    $('#text-placeholder').text('This page is currently under construction...');
+    $('#text-placeholder').removeClass('invisible');
 });
