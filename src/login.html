@@ -37,9 +37,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/">Homepage</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/empty.html?title=The+institue">The institute</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="nav-bar-houses" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">Faculties</a>
@@ -69,7 +66,7 @@
                                     <a class="dropdown-item" href="/empty.html?title=Bachelor">Bachelor</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/empty.hmlt?title=Master">Master</a>
+                                    <a class="dropdown-item" href="/empty.html?title=Master">Master</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="/empty.html?title=Continuing+education">Continuing education</a>
@@ -110,14 +107,18 @@
             <section class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
                     <h1 class="text-primary mb-4">Login</h1>
-                    <form>
+                    <form novalidate id="login-form">
                         <div class="form-group">
-                            <label for="login-email">Email address</label>
-                            <input class="form-control" id="login-email" type="email" placeholder="Enter email">
+                            <label for="login-email">Email address
+                                <small class="text-secondary">(required)</small>
+                            </label>
+                            <input class="form-control" id="login-email" type="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="login-password">Password</label>
-                            <input class="form-control" id="login-password" type="password" placeholder="Enter password">
+                            <label for="login-password">Password
+                                <small class="text-secondary">(required)</small>
+                            </label>
+                            <input class="form-control" id="login-password" type="password" placeholder="Password" required>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -125,7 +126,7 @@
                                 <label class="form-check-label" for="login-remmeber">Keep me logged in</label>
                             </div>
                         </div>
-                        <button class="btn btn-primary" type="submit">Login</button>
+                        <button class="btn btn-primary">Login</button>
                         <button class="btn btn-link text-danger ml-3">Forget password</button>
                     </form>
                 </div>
@@ -136,46 +137,77 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-12 col-lg-6">
-                                <label for="register-first-name">First name</label>
-                                <input class="form-control" type="text" id="register-first-name" placeholder="Enter first name">
+                                <label for="register-first-name">First name
+                                    <small class="text-secondary">(required)</small>
+                                </label>
+                                <input class="form-control" type="text" id="register-first-name" placeholder="First name" required>
                             </div>
                             <div class="form-group col-12 col-lg-6">
-                                <label for="register-last-name">Last name</label>
-                                <input class="form-control" type="text" id="register-last-name" placeholder="Enter last name">
+                                <label for="register-last-name">Last name
+                                    <small class="text-secondary">(required)</small>
+                                </label>
+                                <input class="form-control" type="text" id="register-last-name" placeholder="Last name" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="register-email">Email address</label>
-                            <input class="form-control" id="register-email" type="email" placeholder="Enter email">
+                            <label for="register-email">Email address
+                                <small class="text-secondary">(required)</small>
+                            </label>
+                            <input class="form-control" id="register-email" type="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="register-password">Password</label>
-                            <input class="form-control" id="register-password" type="password" placeholder="Enter password">
+                            <label for="register-password">Password
+                                <small class="text-secondary">(required)</small>
+                            </label>
+                            <input class="form-control" id="register-password" type="password" placeholder="Password" required>
                         </div>
+                        <fieldset class="form-group">
+                            <div>
+                                <label class="form-label">Programme
+                                    <small class="text-secondary">(required)</small>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="register-degree-1" type="radio" name="register-degree" value="bachelor" required>
+                                <label class="form-check-label" for="register-degree-1">Bachelor</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="register-degree-2" type="radio" name="register-degree" value="master" required>
+                                <label class="form-check-label" for="register-degree-2">Master</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="register-degree-3" type="radio" name="register-degree" value="continuing" required>
+                                <label class="form-check-label" for="register-degree-3">Continuing education</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="register-degree-4" type="radio" name="register-degree" value="doctorate" required>
+                                <label class="form-check-label" for="register-degree-4">Doctorate</label>
+                            </div>
+                        </fieldset>
                         <div class="form-group">
-                            <label for="register-address">Address</label>
-                            <input class="form-control" id="register-address" type="text" placeholder="Enter address">
+                            <label for="register-address">Address
+                                <small class="text-secondary">(optinal)</small>
+                            </label>
+                            <input class="form-control" id="register-address" type="text" placeholder="Address">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12 col-lg-6">
-                                <label for="register-city">City</label>
-                                <input class="form-control" id="register-city" type="text" placeholder="Enter city">
+                                <label for="register-city">City
+                                    <small class="text-secondary">(optinal)</small>
+                                </label>
+                                <input class="form-control" id="register-city" type="text" placeholder="City">
                             </div>
                             <div class="form-group col-12 col-lg-4">
-                                <label for="register-state">State</label>
-                                <input class="form-control" id="register-state" type="text" placeholder="Enter state">
+                                <label for="register-state">State
+                                    <small class="text-secondary">(optinal)</small>
+                                </label>
+                                <input class="form-control" id="register-state" type="text" placeholder="State">
                             </div>
                             <div class="form-group col-12 col-lg-2">
-                                <label for="register-zip">Zip</label>
-                                <input class="form-control" id="register-zip" type="text" placeholder="Enter zip">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="agreement" id="register-agreement">
-                                <label class="form-check-label" for="register-agreement">I agree with the
-                                    <a href="/empty.html?title=Terms+of+services">terms of service</a> and the
-                                    <a href="/empty.html?title=Privacy+policy">privacy policy</a>.</label>
+                                <label for="register-zip">Zip
+                                    <small class="text-secondary">(optinal)</small>
+                                </label>
+                                <input class="form-control" id="register-zip" type="text" placeholder="Zip">
                             </div>
                         </div>
                         <button class="btn btn-primary" type="submit">Register</button>
