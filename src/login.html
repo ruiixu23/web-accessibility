@@ -107,110 +107,117 @@
             <section class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
                     <h1 class="text-primary mb-4">Login</h1>
-                    <form novalidate id="login-form">
+                    <form id="login-form">
                         <div class="form-group">
-                            <label for="login-email">Email address
-                                <small class="text-secondary">(required)</small>
-                            </label>
-                            <input class="form-control" id="login-email" type="email" placeholder="Email" required>
+                            <label for="login-email-control">Email</label>
+                            <input class="form-control" id="login-email-control" type="email" placeholder="Email" required>
+                            <div class="invalid-feedback">The email is invalid</div>
                         </div>
                         <div class="form-group">
-                            <label for="login-password">Password
-                                <small class="text-secondary">(required)</small>
-                            </label>
-                            <input class="form-control" id="login-password" type="password" placeholder="Password" required>
+                            <label for="login-password-control">Password</label>
+                            <input class="form-control" id="login-password-control" type="password" placeholder="Password">
+                            <div class="invalid-feedback">The password cannot be empty</div>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber">
-                                <label class="form-check-label" for="login-remmeber">Keep me logged in</label>
+                                <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control">
+                                <label class="form-check-label" for="login-remmeber-control">Keep me logged in</label>
                             </div>
                         </div>
-                        <button class="btn btn-primary">Login</button>
-                        <button class="btn btn-link text-danger ml-3">Forget password</button>
+                        <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
+                        <button class="btn btn-link text-danger ml-3" id="login-forogt-button" type="button">Forgot password</button>
                     </form>
                 </div>
             </section>
+
             <section class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
                     <h1 class="text-primary mb-4">Create new account</h1>
                     <form>
-                        <div class="form-row">
-                            <div class="form-group col-12 col-lg-6">
-                                <label for="register-first-name">First name
-                                    <small class="text-secondary">(required)</small>
-                                </label>
-                                <input class="form-control" type="text" id="register-first-name" placeholder="First name" required>
-                            </div>
-                            <div class="form-group col-12 col-lg-6">
-                                <label for="register-last-name">Last name
-                                    <small class="text-secondary">(required)</small>
-                                </label>
-                                <input class="form-control" type="text" id="register-last-name" placeholder="Last name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="register-email">Email address
+                        <fieldset class="form-group" role="group" aria-labelledby="register-basic-legend">
+                            <legend class="form-label" id="register-basic-legend">Basic information
                                 <small class="text-secondary">(required)</small>
-                            </label>
-                            <input class="form-control" id="register-email" type="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="register-password">Password
-                                <small class="text-secondary">(required)</small>
-                            </label>
-                            <input class="form-control" id="register-password" type="password" placeholder="Password" required>
-                        </div>
-                        <fieldset class="form-group">
-                            <div>
-                                <label class="form-label">Programme
-                                    <small class="text-secondary">(required)</small>
+                            </legend>
+                            <div class="form-row">
+                                <div class="form-group col-12 col-lg-6">
+                                    <label for="register-first-name-control">First name
+                                        <small class="text-secondary sr-only">(required)</small>
+                                    </label>
+                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required>
+                                </div>
+                                <div class="form-group col-12 col-lg-6">
+                                    <label for="register-last-name-control">Last name
+                                        <small class="text-secondary sr-only">(required)</small>
+                                    </label>
+                                    <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-email-control">Email
+                                    <small class="text-secondary sr-only">(required)</small>
                                 </label>
+                                <input class="form-control" id="register-email-control" type="email" placeholder="Email" required>
                             </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="register-degree-1" type="radio" name="register-degree" value="bachelor" required>
-                                <label class="form-check-label" for="register-degree-1">Bachelor</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="register-degree-2" type="radio" name="register-degree" value="master" required>
-                                <label class="form-check-label" for="register-degree-2">Master</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="register-degree-3" type="radio" name="register-degree" value="continuing" required>
-                                <label class="form-check-label" for="register-degree-3">Continuing education</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="register-degree-4" type="radio" name="register-degree" value="doctorate" required>
-                                <label class="form-check-label" for="register-degree-4">Doctorate</label>
+                            <div class="form-group">
+                                <label for="register-password-control">Password
+                                    <small class="text-secondary sr-only">(required)</small>
+                                </label>
+                                <input class="form-control" id="register-password-control" type="password" placeholder="Password" required>
                             </div>
                         </fieldset>
-                        <div class="form-group">
-                            <label for="register-address">Address
-                                <small class="text-secondary">(optinal)</small>
-                            </label>
-                            <input class="form-control" id="register-address" type="text" placeholder="Address">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-12 col-lg-6">
-                                <label for="register-city">City
-                                    <small class="text-secondary">(optinal)</small>
-                                </label>
-                                <input class="form-control" id="register-city" type="text" placeholder="City">
+                        <fieldset class="form-group" role="group" aria-labelledby="register-programme-legend">
+                            <legend class="form-label" id="register-programme-legend">Programme
+                                <small class="text-secondary">(required)</small>
+                            </legend>
+                            <div class="form-check form-check-inline mr-3">
+                                <input class="form-check-input" id="register-degree-control-1" type="radio" name="register-degree" value="bachelor" required>
+                                <label class="form-check-label" for="register-degree-control-1">Bachelor</label>
                             </div>
-                            <div class="form-group col-12 col-lg-4">
-                                <label for="register-state">State
-                                    <small class="text-secondary">(optinal)</small>
-                                </label>
-                                <input class="form-control" id="register-state" type="text" placeholder="State">
+                            <div class="form-check form-check-inline mr-3">
+                                <input class="form-check-input" id="register-degree-control-2" type="radio" name="register-degree" value="master" required>
+                                <label class="form-check-label" for="register-degree-control-2">Master</label>
                             </div>
-                            <div class="form-group col-12 col-lg-2">
-                                <label for="register-zip">Zip
-                                    <small class="text-secondary">(optinal)</small>
-                                </label>
-                                <input class="form-control" id="register-zip" type="text" placeholder="Zip">
+                            <div class="form-check form-check-inline mr-3">
+                                <input class="form-check-input" id="register-degree-control-3" type="radio" name="register-degree" value="continuing" required>
+                                <label class="form-check-label" for="register-degree-control-3">Continuing education</label>
                             </div>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Register</button>
+                            <div class="form-check form-check-inline mr-3">
+                                <input class="form-check-input" id="register-degree-control-4" type="radio" name="register-degree" value="doctorate" required>
+                                <label class="form-check-label" for="register-degree-control-4">Doctorate</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group" role="group" aria-labelledby="register-address-legend">
+                            <legend class="form-label" id="register-address-legend">Address
+                                <small class="text-secondary">(optional)</small>
+                            </legend>
+                            <div class="form-group">
+                                <label for="register-street-control">Street
+                                    <small class="text-secondary sr-only">(optional)</small>
+                                </label>
+                                <input class="form-control" id="register-street-control" type="text" placeholder="Street">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-12 col-lg-5">
+                                    <label for="register-city-control">City
+                                        <small class="text-secondary sr-only">(optional)</small>
+                                    </label>
+                                    <input class="form-control" id="register-city-control" type="text" placeholder="City">
+                                </div>
+                                <div class="form-group col-12 col-lg-4">
+                                    <label for="register-state-control">State
+                                        <small class="text-secondary sr-only">(optional)</small>
+                                    </label>
+                                    <input class="form-control" id="register-state-control" type="text" placeholder="State">
+                                </div>
+                                <div class="form-group col-12 col-lg-3">
+                                    <label for="register-zip-control">Zip
+                                        <small class="text-secondary sr-only">(optional)</small>
+                                    </label>
+                                    <input class="form-control" id="register-zip-control" type="text" placeholder="Zip">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button class="btn btn-primary" id="register-register-button">Register</button>
                     </form>
                 </div>
             </section>
