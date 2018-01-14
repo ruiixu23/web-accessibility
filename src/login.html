@@ -110,13 +110,11 @@
                     <form id="login-form">
                         <div class="form-group">
                             <label for="login-email-control">Email</label>
-                            <input class="form-control" id="login-email-control" type="email" placeholder="Email" required>
-                            <div class="invalid-feedback">The email is invalid</div>
+                            <input class="form-control" id="login-email-control" type="email" placeholder="Email" required aria-required="true">
                         </div>
                         <div class="form-group">
                             <label for="login-password-control">Password</label>
                             <input class="form-control" id="login-password-control" type="password" placeholder="Password">
-                            <div class="invalid-feedback">The password cannot be empty</div>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -133,7 +131,7 @@
             <section class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
                     <h1 class="text-primary mb-4">Create new account</h1>
-                    <form>
+                    <form id="register-form">
                         <fieldset class="form-group" role="group" aria-labelledby="register-basic-legend">
                             <legend class="form-label" id="register-basic-legend">Basic information
                                 <small class="text-secondary">(required)</small>
@@ -143,51 +141,42 @@
                                     <label for="register-first-name-control">First name
                                         <small class="text-secondary sr-only">(required)</small>
                                     </label>
-                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required>
+                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required aria-required="true">
                                 </div>
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="register-last-name-control">Last name
                                         <small class="text-secondary sr-only">(required)</small>
                                     </label>
-                                    <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required>
+                                    <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required aria-required="true">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="register-email-control">Email
                                     <small class="text-secondary sr-only">(required)</small>
                                 </label>
-                                <input class="form-control" id="register-email-control" type="email" placeholder="Email" required>
+                                <input class="form-control" id="register-email-control" type="email" placeholder="Email" required aria-required="true">
                             </div>
                             <div class="form-group">
                                 <label for="register-password-control">Password
                                     <small class="text-secondary sr-only">(required)</small>
                                 </label>
-                                <input class="form-control" id="register-password-control" type="password" placeholder="Password" required>
+                                <input class="form-control" id="register-password-control" type="password" placeholder="Password" required aria-required="true"
+                                    aria-describedby="register-password-help">
+                                <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain letters and numbers.</small>
                             </div>
-                        </fieldset>
-                        <fieldset class="form-group" role="group" aria-labelledby="register-programme-legend">
-                            <legend class="form-label" id="register-programme-legend">Programme
-                                <small class="text-secondary">(required)</small>
-                            </legend>
-                            <div class="form-check form-check-inline mr-3">
-                                <input class="form-check-input" id="register-degree-control-1" type="radio" name="register-degree" value="bachelor" required>
-                                <label class="form-check-label" for="register-degree-control-1">Bachelor</label>
-                            </div>
-                            <div class="form-check form-check-inline mr-3">
-                                <input class="form-check-input" id="register-degree-control-2" type="radio" name="register-degree" value="master" required>
-                                <label class="form-check-label" for="register-degree-control-2">Master</label>
-                            </div>
-                            <div class="form-check form-check-inline mr-3">
-                                <input class="form-check-input" id="register-degree-control-3" type="radio" name="register-degree" value="continuing" required>
-                                <label class="form-check-label" for="register-degree-control-3">Continuing education</label>
-                            </div>
-                            <div class="form-check form-check-inline mr-3">
-                                <input class="form-check-input" id="register-degree-control-4" type="radio" name="register-degree" value="doctorate" required>
-                                <label class="form-check-label" for="register-degree-control-4">Doctorate</label>
+                            <div class="form-group">
+                                <label for="register-programme-control">Programme</label>
+                                <select class="form-control" id="register-programme-control" required>
+                                    <option value="">Please select your education or research programme</option>
+                                    <option value="bachelor">Bachelor</option>
+                                    <option value="master">Master</option>
+                                    <option value="continuing">Continuing education</option>
+                                    <option value="doctorate">Doctorate</option>
+                                </select>
                             </div>
                         </fieldset>
                         <fieldset class="form-group" role="group" aria-labelledby="register-address-legend">
-                            <legend class="form-label" id="register-address-legend">Address
+                            <legend class="form-label" id="register-address-legend">Address information
                                 <small class="text-secondary">(optional)</small>
                             </legend>
                             <div class="form-group">
