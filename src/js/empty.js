@@ -14,5 +14,6 @@ function getUrlParameter(name) {
 };
 
 $(document).ready(function() {
-    $('#empty-place-holder').text(getUrlParameter('title'));
+    $('#title-placeholder').text(getUrlParameter('title'));
+    $('#text-placeholder').text('This page is currently under construction...');
 });
