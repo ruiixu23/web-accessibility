@@ -15,6 +15,7 @@ module.exports = {
         index: './js/index.js',
         login: './js/login.js',
         empty: './js/empty.js',
+        article: './js/article.js',
     },
     output: {
         filename: 'js/[name].js',
@@ -76,6 +77,12 @@ module.exports = {
             template: 'empty.html',
             inject: true,
             chunks: ['vendor', 'common', 'empty'],
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'article.html',
+            template: 'article.html',
+            inject: true,
+            chunks: ['vendor', 'common', 'article'],
         }),
     ],
 };
