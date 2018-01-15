@@ -40,16 +40,15 @@ function removeValidation(element) {
 function appendErrorToList(list, control, message) {
     let li = document.createElement('li');
 
-    let span = document.createElement('span');
-    span.innerHTML = message;
-    li.appendChild(span);
-
-    let button = document.createElement('button');
-    button.innerHTML = 'Edit';
-    button.addEventListener('click', function(event) {
+    let a = document.createElement('a');
+    a.innerHTML = message;
+    a.href = '#' + control.id;
+    a.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
         control.focus();
     }, false);
-    li.appendChild(button);
+    li.appendChild(a);
     list.appendChild(li);
 }
 
@@ -102,7 +101,7 @@ function login(event) {
     }
 
     error.innerHTML =
-        hasError ? 'Please correct the following error(s):' : '';
+        hasError ? 'Please correct the error(s)' : '';
 }
 
 /**
@@ -137,7 +136,7 @@ function forgot(event) {
     removeValidation(password);
 
     error.innerHTML =
-        hasError ? 'Please correct the following error(s):' : '';
+        hasError ? 'Please correct the error(s):' : '';
 }
 
 /**
@@ -230,7 +229,7 @@ function register(event) {
     }
 
     error.innerHTML =
-        hasError ? 'Please correct the following error(s):' : '';
+        hasError ? 'Please correct the error(s):' : '';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
