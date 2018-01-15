@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import '../scss/empty.scss';
 
 /**
@@ -11,13 +10,17 @@ function getUrlParameter(name) {
     let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     let results = regex.exec(location.search);
     if (results == null) {
-        return '';
+        return null;
     } else {
         return decodeURIComponent(results[1].replace(/\+/g, ' '));
     }
 }
 
-$(document).ready(function() {
-    $('#title-placeholder').text(getUrlParameter('title'));
-    $('#text-placeholder').removeClass('invisible');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    let title = getUrlParameter('title');
+    document.getElementById('title-placeholder').innerHTML
+        = title == null ? 'Not found': title;
+    document.getElementById('text-placeholder').innerHTML
+        = title == null ? '' : 'This page is currently under construction.';
+}, false);
+
