@@ -1,4 +1,3 @@
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
@@ -24,6 +23,15 @@ module.exports = {
     },
     module: {
         rules: [{
+            test: /\.js$/i,
+            exclude: /(node_modules)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['es2015'],
+                },
+            },
+        }, {
             test: /\.scss$/i,
             use: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
