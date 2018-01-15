@@ -107,16 +107,20 @@
             <section class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
                     <h1 class="text-primary mb-4">Login</h1>
+                    <div class="sr-only">
+                        <h2 id="login-error" aria-live="assertive"></h2>
+                        <ul id="login-error-list"></ul>
+                    </div>
                     <form id="login-form" novalidate>
                         <div class="form-group">
                             <label for="login-email-control">Email</label>
                             <input class="form-control" id="login-email-control" type="email" placeholder="Email" required aria-required="true">
-                            <small class="invalid-feedback" aria-live="polite"></small>
+                            <small class="invalid-feedback" aria-hidden="true"></small>
                         </div>
                         <div class="form-group">
                             <label for="login-password-control">Password</label>
                             <input class="form-control" id="login-password-control" type="password" placeholder="Password">
-                            <small class="invalid-feedback" aria-live="polite"></small>
+                            <small class="invalid-feedback" aria-hidden="true"></small>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -133,6 +137,10 @@
             <section class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
                     <h1 class="text-primary mb-4">Create new account</h1>
+                    <div class="sr-only">
+                        <h2 id="register-error" aria-live="assertive"></h2>
+                        <ul id="register-error-list"></ul>
+                    </div>
                     <form id="register-form" novalidate>
                         <fieldset class="form-group" role="group" aria-labelledby="register-basic-legend">
                             <legend class="form-label" id="register-basic-legend">Required information</legend>
@@ -142,12 +150,14 @@
                                         <small class="text-secondary sr-only">(required)</small>
                                     </label>
                                     <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required aria-required="true">
+                                    <small class="invalid-feedback" aria-hidden="true"></small>
                                 </div>
                                 <div class="form-group col-12 col-lg-6">
                                     <label for="register-last-name-control">Last name
                                         <small class="text-secondary sr-only">(required)</small>
                                     </label>
                                     <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required aria-required="true">
+                                    <small class="invalid-feedback" aria-hidden="true"></small>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -155,6 +165,7 @@
                                     <small class="text-secondary sr-only">(required)</small>
                                 </label>
                                 <input class="form-control" id="register-email-control" type="email" placeholder="Email" required aria-required="true">
+                                <small class="invalid-feedback" aria-hidden="true"></small>
                             </div>
                             <div class="form-group">
                                 <label for="register-password-control">Password
@@ -162,6 +173,7 @@
                                 </label>
                                 <input class="form-control" id="register-password-control" type="password" placeholder="Password" required aria-required="true"
                                     aria-describedby="register-password-help">
+                                <small class="invalid-feedback" aria-hidden="true"></small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
@@ -173,6 +185,7 @@
                                     <option value="continuing">Continuing education</option>
                                     <option value="doctorate">Doctorate</option>
                                 </select>
+                                <small class="invalid-feedback" aria-hidden="true"></small>
                             </div>
                         </fieldset>
                         <fieldset class="form-group" role="group" aria-labelledby="register-address-legend">
