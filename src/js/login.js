@@ -229,7 +229,7 @@ function register(event) {
     }
 
     error.innerHTML =
-        hasError ? 'Please correct the error(s):' : '';
+        hasError ? 'Please correct the error(s)' : '';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
