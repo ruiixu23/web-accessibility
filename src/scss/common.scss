@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  font-size: 1rem;
 }
 
 body {
@@ -35,4 +36,12 @@ body {
   h2 {
     font-size: 1.2rem;
   }
+}
+
+#font-increase-button, #font-increase-button-1 {
+    font-size: 0.8rem;
+}
+
+#font-decrease-button, #font-decrease-button-1 {
+  font-size: 0.6rem;
 }

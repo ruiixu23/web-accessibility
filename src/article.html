@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="root">
 
 <head>
     <meta charset="UTF-8">
@@ -11,11 +11,21 @@
 <body class="d-flex flex-column bg-light">
     <header class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
-            <div class="media">
-                <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="University logo">
-                <div class="media-body align-self-center">
-                    <div class="mb-0 title">Lorem Ipsum
-                        <br>Institute of Technology
+            <div class="row no-gutters">
+                <div class="col-8 media">
+                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="University logo">
+                    <div class="media-body align-self-center">
+                        <div class="mb-0 title">Lorem Ipsum
+                            <br>Institute of Technology
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="btn-toolbar justify-content-end" role="toolbar" aria-labelledby="Change appearance">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
+                            <button class="btn btn-link" id="font-increase-button" aria-label="Increase font size">Text</button>
+                            <button class="btn btn-link" id="font-decrease-button" aria-label="Decrease font size">Text</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -24,7 +34,7 @@
 
     <nav class="container-fluid bg-dark nav">
         <div class="container">
-            <div class="container navbar navbar-dark bg-dark navbar-expand-lg px-0">
+            <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <a class="navbar-brand d-lg-none" href="#">
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Unversity logo">
                 </a>
@@ -99,6 +109,14 @@
                     </ur>
                 </div>
             </div>
+            <div class="d-lg-none">
+                <div class="btn-toolbar justify-content-end" role="toolbar" aria-labelledby="Change appearance">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
+                        <button class="btn btn-link text-white" id="font-increase-button-1" aria-label="Increase font size">Text</button>
+                        <button class="btn btn-link text-white" id="font-decrease-button-1" aria-label="Decrease font size">Text</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -132,8 +150,14 @@
                         <tr>
                             <th class="align-middle" scope="col">Century</th>
                             <th class="align-middle" scope="col">Year</th>
-                            <th class="align-middle" scope="col">Average<br><small>(Celcius)</small></th>
-                            <th class="align-middle" scope="col">Smoothed<br><small>(Celcius)</small></th>
+                            <th class="align-middle" scope="col">Average
+                                <br>
+                                <small>(Celcius)</small>
+                            </th>
+                            <th class="align-middle" scope="col">Smoothed
+                                <br>
+                                <small>(Celcius)</small>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
