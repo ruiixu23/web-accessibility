@@ -7,6 +7,15 @@ body {
   height: 100%;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
 .header {
   .logo {
     height: 3.5rem;
@@ -20,6 +29,19 @@ body {
 }
 
 .header,
+.nav {
+  .font-increase-button {
+    font-size: .8rem;
+    // padding: .25rem;
+  }
+
+  .font-decrease-button {
+    font-size: .6rem;
+    // padding: .25rem;
+  }
+}
+
+.header,
 .nav,
 .footer {
   flex: 0 0 auto;
@@ -27,21 +49,4 @@ body {
 
 .main {
   flex: 1 0 auto;
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 100;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-}
-
-#font-increase-button, #font-increase-button-1 {
-    font-size: 0.8rem;
-}
-
-#font-decrease-button, #font-decrease-button-1 {
-  font-size: 0.6rem;
 }
