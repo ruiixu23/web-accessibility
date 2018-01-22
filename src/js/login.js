@@ -100,8 +100,12 @@ function login(event) {
         setValid(password);
     }
 
-    error.innerHTML =
-        hasError ? 'Please correct the error(s)' : '';
+    if (hasError) {
+        error.innerHTML = 'Please correct the error(s)';
+        document.querySelector('#login-error-list li a').focus();
+    } else {
+        error.innerHTML = '';
+    }
 }
 
 /**
@@ -135,8 +139,12 @@ function forgot(event) {
     let password = document.getElementById('login-password-control');
     removeValidation(password);
 
-    error.innerHTML =
-        hasError ? 'Please correct the error(s):' : '';
+    if (hasError) {
+        error.innerHTML = 'Please correct the error(s)';
+        document.querySelector('#login-error-list li a').focus();
+    } else {
+        error.innerHTML = '';
+    }
 }
 
 /**
@@ -228,8 +236,12 @@ function register(event) {
         setValid(programme);
     }
 
-    error.innerHTML =
-        hasError ? 'Please correct the error(s)' : '';
+    if (hasError) {
+        error.innerHTML = 'Please correct the error(s)';
+        document.querySelector('#register-error-list li a').focus();
+    } else {
+        error.innerHTML = '';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -245,4 +257,3 @@ document.addEventListener('DOMContentLoaded', function() {
         .getElementById('register-register-button')
         .addEventListener('click', register, false);
 }, false);
-
