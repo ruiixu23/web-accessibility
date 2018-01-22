@@ -9,6 +9,7 @@
 </head>
 
 <body class="d-flex flex-column bg-light">
+    <a class="sr-only" href="#main">Skip to main content</a>
     <header class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
@@ -21,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="btn-toolbar justify-content-end" role="toolbar" aria-labelledby="Change appearance">
+                    <div class="btn-toolbar justify-content-end" role="toolbar">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
                             <button class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size">A+</button>
                             <button class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size">A-</button>
@@ -35,9 +36,9 @@
     <nav class="container-fluid bg-dark nav">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
-                <a class="navbar-brand d-lg-none" href="#">
+                <div class="navbar-brand d-lg-none">
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Unversity logo">
-                </a>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar-content" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -110,7 +111,7 @@
                 </div>
             </div>
             <div class="d-lg-none">
-                <div class="btn-toolbar justify-content-end" role="toolbar" aria-labelledby="Change appearance">
+                <div class="btn-toolbar justify-content-end" role="toolbar">
                     <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
                         <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" aria-label="Increase font size">A+</button>
                         <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size">A-</button>
@@ -120,7 +121,7 @@
         </div>
     </nav>
 
-    <main class="container main">
+    <main class="container main" id="main">
         <div class="sr-only">
             <h1>Welcome to Lorem Ipsum Institute of Technolgoy</h1>
         </div>

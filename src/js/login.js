@@ -101,10 +101,10 @@ function login(event) {
     }
 
     if (hasError) {
-        error.innerHTML = 'Please correct the error(s)';
+        error.classList.remove('d-none');
         document.querySelector('#login-error-list li a').focus();
     } else {
-        error.innerHTML = '';
+        error.classList.add('d-none');
     }
 }
 
@@ -140,10 +140,10 @@ function forgot(event) {
     removeValidation(password);
 
     if (hasError) {
-        error.innerHTML = 'Please correct the error(s)';
+        error.classList.remove('d-none');
         document.querySelector('#login-error-list li a').focus();
     } else {
-        error.innerHTML = '';
+        error.classList.add('d-none');
     }
 }
 
@@ -237,10 +237,10 @@ function register(event) {
     }
 
     if (hasError) {
-        error.innerHTML = 'Please correct the error(s)';
+        error.classList.remove('d-none');
         document.querySelector('#register-error-list li a').focus();
     } else {
-        error.innerHTML = '';
+        error.classList.add('d-none');
     }
 }
 

@@ -9,6 +9,7 @@
 </head>
 
 <body class="d-flex flex-column bg-light">
+    <a class="sr-only" href="#main">Skip to main content</a>
     <header class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
@@ -21,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="btn-toolbar justify-content-end" role="toolbar" aria-labelledby="Change appearance">
+                    <div class="btn-toolbar justify-content-end" role="toolbar">
                         <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
                             <button class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size">A+</button>
                             <button class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size">A-</button>
@@ -35,9 +36,9 @@
     <nav class="container-fluid bg-dark nav">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
-                <a class="navbar-brand d-lg-none" href="#">
+                <div class="navbar-brand d-lg-none">
                     <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Unversity logo">
-                </a>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-bar-content" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -110,7 +111,7 @@
                 </div>
             </div>
             <div class="d-lg-none">
-                <div class="btn-toolbar justify-content-end" role="toolbar" aria-labelledby="Change appearance">
+                <div class="btn-toolbar justify-content-end" role="toolbar">
                     <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
                         <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" aria-label="Increase font size">A+</button>
                         <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size">A-</button>
@@ -120,14 +121,15 @@
         </div>
     </nav>
 
-    <main class="container mt-4 main">
+    <main class="container mt-4 main" id="main">
         <div class="p-4 bg-white">
             <h1 class="text-primary mb-4">Global temperature record shows 2016 as the warmest year on record</h1>
             <div class="text-center wrapper">
                 <figure class="figure mb-4">
-                    <img src="./img/temperature.jpg" class="figure-img img-fluid" alt="Global mean surface temperature">
-                    <figcaption class="figure-caption text-center">Global mean surface temperature change since 1880.
-                        <br>The grey curve indicates the annual average temperature and the black curve shows the smoothed result.</figcaption>
+                    <img src="./img/temperature.jpg" class="figure-img img-fluid" alt="Graphic of global mean temperature change from since 1880.">
+                    <figcaption class="figure-caption text-center px-5">The graphic shows the global mean surface temperature change since 1880 till nowadays. The grey curve
+                        indicates the annual average temperature and the black curve shows the smoothed result. Over the
+                        last two centuries, the mean tempurature has increased by around 1 degree Celcius.</figcaption>
                 </figure>
             </div>
             <p>The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans through
@@ -138,7 +140,7 @@
                 The year 2016 ranks as the warmest on record.</p>
             <div class="table-responsive mt-4 wrapper">
                 <table class="table text-center">
-                    <caption class="text-center">Samples of global mean surface temperature change since 1880.
+                    <caption class="text-center px-5">Samples of global mean surface temperature change since 1880.
                         <span class="sr-only">Column one indicates the century. Column two contains the year. Column three shows the annual average
                             temperature. Column four has the smoothed result.</span>
                     </caption>
