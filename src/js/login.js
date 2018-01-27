@@ -32,37 +32,6 @@ function removeValidation(element) {
 }
 
 /**
- * Apped error to the list
- * @param {object} list - The list DOM element to append to
- * @param {object} control - The form control DOM element
- * @param {string} message - The associated error message
- */
-function appendErrorToList(list, control, message) {
-    let li = document.createElement('li');
-
-    let a = document.createElement('a');
-    a.innerHTML = message;
-    a.href = '#' + control.id;
-    a.addEventListener('click', function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        control.focus();
-    }, false);
-    li.appendChild(a);
-    list.appendChild(li);
-}
-
-/**
- * Remove all list items from the list
- * @param {object} list - The list DOM element to clear
- */
-function clearErrorList(list) {
-    while (list.firstChild) {
-        list.removeChild(list.firstChild);
-    }
-}
-
-/**
  * Validate the login form and try to log the user in
  * @param {object} event - The DOM event
  */
@@ -71,9 +40,6 @@ function login(event) {
     event.stopPropagation();
 
     let hasError = false;
-    let error = document.getElementById('login-error');
-    let errorList = document.getElementById('login-error-list');
-    clearErrorList(errorList);
 
     let email = document.getElementById('login-email-control');
     if (email.validity.valid) {
@@ -82,12 +48,10 @@ function login(event) {
         let message = 'Email cannot be empty.';
         setInvalid(email, message);
         hasError = true;
-        appendErrorToList(errorList, email, message);
     } else {
         let message = 'Email is not valid.';
         setInvalid(email, message);
         hasError = true;
-        appendErrorToList(errorList, email, message);
     }
 
     let password = document.getElementById('login-password-control');
@@ -95,16 +59,12 @@ function login(event) {
         let message = 'Password cannot be empty.';
         setInvalid(password, message);
         hasError = true;
-        appendErrorToList(errorList, password, message);
     } else {
         setValid(password);
     }
 
     if (hasError) {
-        error.classList.remove('d-none');
         document.querySelector('#login-error-list li a').focus();
-    } else {
-        error.classList.add('d-none');
     }
 }
 
@@ -117,9 +77,6 @@ function forgot(event) {
     event.stopPropagation();
 
     let hasError = false;
-    let error = document.getElementById('login-error');
-    let errorList = document.getElementById('login-error-list');
-    clearErrorList(errorList);
 
     let email = document.getElementById('login-email-control');
     if (email.validity.valid) {
@@ -128,22 +85,17 @@ function forgot(event) {
         let message = 'Email cannot be empty.';
         setInvalid(email, message);
         hasError = true;
-        appendErrorToList(errorList, email, message);
     } else {
         let message = 'Email is not valid.';
         setInvalid(email, message);
         hasError = true;
-        appendErrorToList(errorList, email, message);
     }
 
     let password = document.getElementById('login-password-control');
     removeValidation(password);
 
     if (hasError) {
-        error.classList.remove('d-none');
         document.querySelector('#login-error-list li a').focus();
-    } else {
-        error.classList.add('d-none');
     }
 }
 
@@ -156,16 +108,12 @@ function register(event) {
     event.stopPropagation();
 
     let hasError = false;
-    let error = document.getElementById('register-error');
-    let errorList = document.getElementById('register-error-list');
-    clearErrorList(errorList);
 
     let firstName = document.getElementById('register-first-name-control');
     if (firstName.value.trim().length == 0) {
         let message = 'First name cannot be empty.';
         setInvalid(firstName, message);
         hasError = true;
-        appendErrorToList(errorList, firstName, message);
     } else if (firstName.validity.valid) {
         setValid(firstName);
     }
@@ -175,7 +123,6 @@ function register(event) {
         let message = 'Last name cannot be empty.';
         setInvalid(lastName, message);
         hasError = true;
-        appendErrorToList(errorList, lastName, message);
     } else if (lastName.validity.valid) {
         setValid(lastName);
     }
@@ -187,12 +134,10 @@ function register(event) {
         let message = 'Email cannot be empty.';
         setInvalid(email, message);
         hasError = true;
-        appendErrorToList(errorList, email, message);
     } else {
         let message = 'Email is not valid.';
         setInvalid(email, message);
         hasError = true;
-        appendErrorToList(errorList, email, message);
     }
 
     let password = document.getElementById('register-password-control');
@@ -201,22 +146,18 @@ function register(event) {
         let message = 'Password is too short.';
         setInvalid(password, message);
         hasError = true;
-        appendErrorToList(errorList, password, message);
     } else if (passwordValue.length > 16) {
         let message = 'Password is too long.';
         setInvalid(password, message);
         hasError = true;
-        appendErrorToList(errorList, password, message);
     } else if (passwordValue.match(/[a-zA-Z]+/) == null) {
         let message = 'Password must contain at least one letter.';
         setInvalid(password, message);
         hasError = true;
-        appendErrorToList(errorList, password, message);
     } else if (passwordValue.match(/[0-9]+/) == null) {
         let message = 'Password must contain at least one number.';
         setInvalid(password, message);
         hasError = true;
-        appendErrorToList(errorList, password, message);
     } else {
         setValid(password);
     }
@@ -226,21 +167,16 @@ function register(event) {
         let message = 'Programme cannot be empty.';
         setInvalid(programme, message);
         hasError = true;
-        appendErrorToList(errorList, programme, message);
     } else if (!programme.validity.valid) {
         let message = 'Programme is not valid.';
         setInvalid(programme, message);
         hasError = true;
-        appendErrorToList(errorList, programme, message);
     } else {
         setValid(programme);
     }
 
     if (hasError) {
-        error.classList.remove('d-none');
         document.querySelector('#register-error-list li a').focus();
-    } else {
-        error.classList.add('d-none');
     }
 }
 

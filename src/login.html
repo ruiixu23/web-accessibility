@@ -9,12 +9,11 @@
 </head>
 
 <body class="bg-light">
-    <a class="sr-only" href="#main">Skip to main content</a>
-    <header class="container-fluid d-none d-lg-block my-4 header">
+    <div class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
-                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="University logo">
+                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg">
                     <div class="media-body align-self-center">
                         <div class="mb-0 title">Lorem Ipsum
                             <br>Institute of Technology
@@ -22,24 +21,24 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Change appearance">
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size">A-</button>
+                    <div class="btn-toolbar justify-content-end">
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
+                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <nav class="container-fluid bg-dark nav">
+    <div class="container-fluid bg-dark nav">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
-                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Unversity logo">
+                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40">
                 </div>
-                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="nav-bar-content">
@@ -48,8 +47,8 @@
                             <a class="nav-link" href="/">Homepage</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" role="button" aria-haspopup="true" aria-expanded="false">Faculties</a>
-                            <ul class="dropdown-menu" aria-labelledby="nav-bar-faculties">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" role="button">Faculties</a>
+                            <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/empty.html?title=Applied+sciences">Applied sciences</a>
                                 </li>
@@ -68,8 +67,8 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" role="button" aria-haspopup="true" aria-expanded="false">Education &amp; research</a>
-                            <ul class="dropdown-menu" aria-labelledby="nav-bar-education">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" role="button">Education &amp; research</a>
+                            <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/empty.html?title=Bachelor">Bachelor</a>
                                 </li>
@@ -85,8 +84,8 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" role="button" aria-haspopup="true" aria-expanded="false">Industry &amp; partners</a>
-                            <ul class="dropdown-menu" aria-labelledby="nav-bar-industry">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" role="button">Industry &amp; partners</a>
+                            <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/empty.html?title=Public+relations">Public relations</a>
                                 </li>
@@ -107,92 +106,79 @@
                 </div>
             </div>
             <div class="d-lg-none">
-                <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Change appearance">
-                    <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" aria-label="Increase font size">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size">A-</button>
+                <div class="btn-toolbar justify-content-end">
+                    <div class="btn-group btn-group-sm">
+                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
+                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <main class="container main" id="main">
+    <div class="container main" id="main">
         <div class="row no-gutters">
-            <section class="col-12 col-md-5 mt-4 login">
+            <div class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
                     <h1 class="text-primary mb-4">Login</h1>
-                    <h2 class="text-danger mb-4 d-none" id="login-error" aria-live="assertive">Please correct the error(s)</h2>
-                    <div class="sr-only">
-                        <ul id="login-error-list"></ul>
-                    </div>
+                    <h2 class="text-danger mb-4 d-none" id="login-error">Please correct the error(s)</h2>
                     <form id="login-form" novalidate>
                         <div class="form-group">
-                            <label for="login-email-control">Email</label>
+                            <label>Email</label>
                             <input class="form-control" id="login-email-control" type="email" placeholder="Email" required aria-required="true">
-                            <small class="invalid-feedback" aria-hidden="true"></small>
+                            <small class="invalid-feedback"></small>
                         </div>
                         <div class="form-group">
-                            <label for="login-password-control">Password</label>
+                            <label>Password</label>
                             <input class="form-control" id="login-password-control" type="password" placeholder="Password">
-                            <small class="invalid-feedback" aria-hidden="true"></small>
+                            <small class="invalid-feedback"></small>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control">
-                                <label class="form-check-label" for="login-remmeber-control">Keep me logged in</label>
+                                <label class="form-check-label">Keep me logged in</label>
                             </div>
                         </div>
                         <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
                         <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button">Forgot password</button>
                     </form>
                 </div>
-            </section>
+            </div>
 
             <section class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
                     <h1 class="text-primary mb-4">Create new account</h1>
-                    <h2 class="text-danger mb-4 d-none" id="register-error" aria-live="assertive">Please correct the error(s)</h2>
-                    <div class="sr-only">
-                        <ul id="register-error-list"></ul>
-                    </div>
+                    <h2 class="text-danger mb-4 d-none" id="register-error">Please correct the error(s)</h2>
                     <form id="register-form" novalidate>
-                        <fieldset class="form-group" role="group" aria-labelledby="register-basic-legend">
-                            <legend class="form-label" id="register-basic-legend">Basic information</legend>
+                        <fieldset class="form-group">
+                            <legend class="form-label" id="register-basic-legend">Basic information
+                                <small class="text-secondary">(optional)</small>
+                            </legend>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-6">
-                                    <label for="register-first-name-control">First name
-                                        <small class="text-secondary sr-only">(required)</small>
-                                    </label>
-                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required aria-required="true">
-                                    <small class="invalid-feedback" aria-hidden="true"></small>
+                                    <label>First name</label>
+                                    <input class="form-control" type="text" id="register-first-name-control" placeholder="First name" required>
+                                    <small class="invalid-feedback"></small>
                                 </div>
                                 <div class="form-group col-12 col-lg-6">
-                                    <label for="register-last-name-control">Last name
-                                        <small class="text-secondary sr-only">(required)</small>
-                                    </label>
-                                    <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required aria-required="true">
-                                    <small class="invalid-feedback" aria-hidden="true"></small>
+                                    <label>Last name</label>
+                                    <input class="form-control" type="text" id="register-last-name-control" placeholder="Last name" required>
+                                    <small class="invalid-feedback"></small>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="register-email-control">Email
-                                    <small class="text-secondary sr-only">(required)</small>
-                                </label>
-                                <input class="form-control" id="register-email-control" type="email" placeholder="Email" required aria-required="true">
-                                <small class="invalid-feedback" aria-hidden="true"></small>
+                                <label>Email</label>
+                                <input class="form-control" id="register-email-control" type="email" placeholder="Email" required>
+                                <small class="invalid-feedback"></small>
                             </div>
                             <div class="form-group">
-                                <label for="register-password-control">Password
-                                    <small class="text-secondary sr-only">(required)</small>
-                                </label>
-                                <input class="form-control" id="register-password-control" type="password" placeholder="Password" required aria-required="true"
-                                    aria-describedby="register-password-help">
-                                <small class="invalid-feedback" aria-hidden="true"></small>
+                                <label>Password</label>
+                                <input class="form-control" id="register-password-control" type="password" placeholder="Password" required>
+                                <small class="invalid-feedback"></small>
                                 <small id="register-password-help" class="form-text text-muted">Your password must be 8-16 characters long and contain both letters and numbers.</small>
                             </div>
                             <div class="form-group">
-                                <label for="register-programme-control">Programme</label>
+                                <label>Programme</label>
                                 <select class="form-control" id="register-programme-control" required>
                                     <option value="">Please select your education or research programme</option>
                                     <option value="bachelor">Bachelor</option>
@@ -200,34 +186,28 @@
                                     <option value="continuing">Continuing education</option>
                                     <option value="doctorate">Doctorate</option>
                                 </select>
-                                <small class="invalid-feedback" aria-hidden="true"></small>
+                                <small class="invalid-feedback"></small>
                             </div>
                         </fieldset>
-                        <fieldset class="form-group" role="group" aria-labelledby="register-address-legend">
-                            <legend class="form-label" id="register-address-legend">Additional information</legend>
+                        <fieldset class="form-group">
+                            <legend class="form-label" id="register-address-legend">Additional information
+                                <small class="text-secondary">(optional)</small>
+                            </legend>
                             <div class="form-group">
-                                <label for="register-street-control">Street
-                                    <small class="text-secondary sr-only">(optional)</small>
-                                </label>
+                                <label>Street</label>
                                 <input class="form-control" id="register-street-control" type="text" placeholder="Street">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-12 col-lg-5">
-                                    <label for="register-city-control">City
-                                        <small class="text-secondary sr-only">(optional)</small>
-                                    </label>
+                                    <label>City</label>
                                     <input class="form-control" id="register-city-control" type="text" placeholder="City">
                                 </div>
                                 <div class="form-group col-12 col-lg-4">
-                                    <label for="register-state-control">State
-                                        <small class="text-secondary sr-only">(optional)</small>
-                                    </label>
+                                    <label>State</label>
                                     <input class="form-control" id="register-state-control" type="text" placeholder="State">
                                 </div>
                                 <div class="form-group col-12 col-lg-3">
-                                    <label for="register-zip-control">Zip
-                                        <small class="text-secondary sr-only">(optional)</small>
-                                    </label>
+                                    <label>Zip</label>
                                     <input class="form-control" id="register-zip-control" type="text" placeholder="Zip">
                                 </div>
                             </div>
@@ -237,9 +217,9 @@
                 </div>
             </section>
         </div>
-    </main>
+    </div>
 
-    <footer class="container-fluid bg-dark mt-4 footer">
+    <div class="container-fluid bg-dark mt-4 footer">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=About">About</a>
@@ -249,7 +229,7 @@
                 <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=Privacy+policy">Privacy policy</a>
             </div>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>

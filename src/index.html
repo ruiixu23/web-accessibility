@@ -9,12 +9,11 @@
 </head>
 
 <body class="d-flex flex-column bg-light">
-    <a class="sr-only" href="#main">Skip to main content</a>
-    <header class="container-fluid d-none d-lg-block my-4 header">
+    <div class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
-                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="University logo">
+                    <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg">
                     <div class="media-body align-self-center">
                         <div class="mb-0 title">Lorem Ipsum
                             <br>Institute of Technology
@@ -22,24 +21,24 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Change appearance">
-                        <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
-                            <button class="btn btn-dark font-increase-button" id="font-increase-button" aria-label="Increase font size">A+</button>
-                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button" aria-label="Decrease font size">A-</button>
+                    <div class="btn-toolbar justify-content-end">
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-dark font-increase-button" id="font-increase-button">A+</button>
+                            <button class="btn btn-dark font-decrease-button" id="font-decrease-button">A-</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <nav class="container-fluid bg-dark nav">
+    <div class="container-fluid bg-dark nav">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
-                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40" alt="Unversity logo">
+                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40">
                 </div>
-                <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="nav-bar-content">
@@ -48,9 +47,8 @@
                             <a class="nav-link" href="/">Homepage</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" role="button" aria-haspopup="true"
-                                aria-expanded="false">Faculties</a>
-                            <ul class="dropdown-menu" aria-labelledby="nav-bar-faculties">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties" role="button">Faculties</a>
+                            <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/empty.html?title=Applied+sciences">Applied sciences</a>
                                 </li>
@@ -69,9 +67,8 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" role="button" aria-haspopup="true"
-                                aria-expanded="false">Education &amp; research</a>
-                            <ul class="dropdown-menu" aria-labelledby="nav-bar-education">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education" role="button">Education &amp; research</a>
+                            <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/empty.html?title=Bachelor">Bachelor</a>
                                 </li>
@@ -87,9 +84,8 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" role="button" aria-haspopup="true"
-                                aria-expanded="false">Industry &amp; partners</a>
-                            <ul class="dropdown-menu" aria-labelledby="nav-bar-industry">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry" role="button">Industry &amp; partners</a>
+                            <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item" href="/empty.html?title=Public+relations">Public relations</a>
                                 </li>
@@ -110,26 +106,26 @@
                 </div>
             </div>
             <div class="d-lg-none">
-                <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Change appearance">
-                    <div class="btn-group btn-group-sm" role="group" aria-label="Font size">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1" aria-label="Increase font size">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1" aria-label="Decrease font size">A-</button>
+                <div class="btn-toolbar justify-content-end">
+                    <div class="btn-group btn-group-sm">
+                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
+                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <main class="container main" id="main">
+    <div class="container main" id="main">
         <div class="sr-only">
             <h1>Welcome to Lorem Ipsum Institute of Technolgoy</h1>
         </div>
         <div class="row no-gutters">
             <div class="col-12 col-lg-6">
-                <section class="p-4 mt-4 mr-lg-3 bg-white news">
+                <div class="p-4 mt-4 mr-lg-3 bg-white news">
                     <h2 class="text-primary mb-4">News &amp; events</h2>
-                    <article class="media mt-4">
-                        <img class="my-1 mr-2 rounded-right" src="./img/iceberg.jpg" alt="Photo of an iceberg">
+                    <div class="media mt-4">
+                        <img class="my-1 mr-2 rounded-right" src="./img/iceberg.jpg">
                         <div class="media-body">
                             <h3 class="text-info mt-0 mb-2">
                                 <a href="/article.html">Global temperature record</a>
@@ -139,12 +135,12 @@
                                 year on record.
                             </p>
                             <div class="my-3 text-secondary text-right">
-                                <time datetime="2018-01-15">2018/01/15</time>
+                                <div>2018/01/15</div>
                             </div>
                         </div>
-                    </article>
-                    <article class="media mt-4">
-                        <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg" alt="Photo of a galaxy">
+                    </div>
+                    <div class="media mt-4">
+                        <img class="my-1 mr-2 rounded-right" src="./img/universe.jpg">
                         <div class="media-body">
                             <h3 class="text-info mt-0 mb-2">
                                 <a href="/empty.html?title=Article">At iam decimum annum in spelunca iacet</a>
@@ -154,12 +150,12 @@
                                 dederetur. Ergo id est convenienter naturae vivere, a natura discedere.
                             </p>
                             <div class="my-3 text-secondary text-right">
-                                <time datetime="2018-01-12">2018/01/12</time>
+                                <div>2018/01/12</div>
                             </div>
                         </div>
-                    </article>
-                    <article class="media mt-4">
-                        <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg" alt="Photo of a robot">
+                    </div>
+                    <div class="media mt-4">
+                        <img class="my-1 mr-2 rounded-right" src="./img/robots.jpg">
                         <div class="media-body">
                             <h3 class="text-info mt-0 mb-2">
                                 <a href="/empty.html?title=Article">Quo plebiscito decreta a senatu est consuli quaestio Cn</a>
@@ -170,14 +166,14 @@
                                 effectrix multarum et magnarum voluptatum.
                             </p>
                             <div class="my-3 text-secondary text-right">
-                                <time datetime="2017-12-30">2017/12/30</time>
+                                <div>2017/12/30</div>
                             </div>
                         </div>
-                    </article>
-                </section>
+                    </div>
+                </div>
             </div>
             <div class="col-12 col-lg-6">
-                <section class="p-4 mt-4 bg-white studies">
+                <div class="p-4 mt-4 bg-white studies">
                     <h2 class="text-primary mb-4">Studies</h2>
                     <p class="font-weight-bold">Advance your scientific education</p>
                     <ul class="list-unstyled ml-3">
@@ -191,9 +187,9 @@
                             <a href="/empty.html?title=Continuing+education">Continuing education programmes</a>
                         </li>
                     </ul>
-                </section>
+                </div>
 
-                <section class="p-4 mt-4 bg-white researches">
+                <div class="p-4 mt-4 bg-white researches">
                     <h2 class="text-primary mb-4">Researches</h2>
                     <p class="font-weight-bold">Join our renowned research groups</p>
                     <p class="ml-3">
@@ -218,12 +214,12 @@
                             <a href="/empty.html?title=Article">Atque haec ita iustitiae propria sunt, ut sint virtutum reliquarum communia</a>
                         </li>
                     </ul>
-                </section>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <footer class="container-fluid bg-dark mt-4 footer">
+    <div class="container-fluid bg-dark mt-4 footer">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=About">About</a>
@@ -233,7 +229,7 @@
                 <a class="col-12 col-md mr-3 text-white" href="/empty.html?title=Privacy+policy">Privacy policy</a>
             </div>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>
