@@ -7,17 +7,22 @@ body {
   height: 100%;
 
   div,
-  p {
+  p,
+  a {
     color: #dfdfdf;
+  }
+
+  a:hover {
+    color: #cdcdcd;
   }
 }
 
-h1 {
+.title {
   font-size: 2rem;
   font-weight: 100;
 }
 
-h2 {
+.subtitle {
   font-size: 1.2rem;
 }
 
@@ -37,12 +42,10 @@ h2 {
 .nav {
   .font-increase-button {
     font-size: .8rem;
-    // padding: .25rem;
   }
 
   .font-decrease-button {
     font-size: .6rem;
-    // padding: .25rem;
   }
 }
 
