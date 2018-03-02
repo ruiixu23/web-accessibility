@@ -49,6 +49,14 @@ module.exports = {
                     name: 'img/[name].[ext]',
                 },
             }],
+        }, {
+            test: /.*\.(mp4|webm|vtt)$/i,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: 'video/[name].[ext]',
+                },
+            }],
         }],
     },
     plugins: [

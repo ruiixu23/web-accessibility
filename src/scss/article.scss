@@ -3,4 +3,26 @@
     margin: auto;
     width: 80%;
   }
+
+  .video {
+    figure {
+      background-color: #cdcdcd;
+    }
+
+    video {
+      margin-bottom: 0;
+      height: 95%;
+      width: 100%;
+    }
+
+    .video-controls {
+      position: relative;
+    }
+
+    .video-progress {
+      height: 100%;
+      border: solid #cdcdcd 1px;
+      color: #4b8a7d;
+    }
+  }
 }

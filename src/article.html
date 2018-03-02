@@ -120,6 +120,44 @@
     <main class="container mt-4 main" id="main">
         <article class="p-5 bg-white" aria-labelledby="article">
             <h1 class="text-primary text-center mb-4" id="article">Global temperature record shows 2016 as the warmest year on record</h1>
+            <div class="text-center wrapper video">
+                <figure class="figure mb-4 p-2" id="video-container">
+                    <video class="figure-img img-fluid" id="video-player" poster="./video/forest.jpg" preload="metadata" controls>
+                        <source src="./video/forest.mp4" type="video/mp4">
+                        <source src="./video/forest.webm" type="video/webm">
+                        <p>The video cannot be played currently.
+                            <a href="./video/forest.mp4">Click here to download the video.</a>
+                        </p>
+                        <track kind="descriptions" src="./video/descriptions.vtt" srclang="en" label="English" default>
+                    </video>
+                    <div class="d-flex flex-row d-none" id="video-controls">
+                        <div class="mx-1">
+                            <button class="btn btn-sm btn-primary" id="video-play" type="button">Play</button>
+                        </div>
+                        <div class="w-100 mx-1">
+                            <progress class="video-progress w-100" id="video-progress" value="0" min="0" aria-label="Progress">
+                                <span class="video-progress-bar" id="video-progress-bar" aria-label="Progress"></span>
+                            </progress>
+                        </div>
+                        <div class="mx-1">
+                            <button class="btn btn-sm btn-primary" id="video-mute" type="button">Mute</button>
+                        </div>
+                        <div class="mx-1">
+                            <button class="btn btn-sm btn-primary" id="video-fullscreen" type="button">Fullscreen</button>
+                        </div>
+                    </div>
+
+                <figcaption>&copy;
+                    <a href="https://www.rainforest-alliance.org/">Rainforest Alliance</a>
+                </figcaption>
+            </figure>
+            </div>
+            <p>The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans through
+                various spans of time. The recently data published by NASA is one of the most detailed information exists
+                since 1850, when methodical thermometer-based records began.
+            </p>
+            <p>Sixteen of the 17 warmest years in the 136-year record all have occurred since 2001, with the exception of 1998.
+                The year 2016 ranks as the warmest on record.</p>
             <div class="text-center wrapper">
                 <figure class="figure mb-4">
                     <img src="./img/temperature.jpg" class="figure-img img-fluid" alt="">
@@ -128,12 +166,6 @@
                         last two centuries, the mean tempurature has increased by around 1 degree Celcius.</figcaption>
                 </figure>
             </div>
-            <p>The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans through
-                various spans of time. The recently data published by NASA is one of the most detailed information exists
-                since 1850, when methodical thermometer-based records began.
-            </p>
-            <p>Sixteen of the 17 warmest years in the 136-year record all have occurred since 2001, with the exception of 1998.
-                The year 2016 ranks as the warmest on record.</p>
             <div class="table-responsive my-4 wrapper">
                 <table class="table text-center">
                     <caption class="text-center px-5">Samples of global mean surface temperature change since 1880.
@@ -194,15 +226,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="text-center wrapper">
-                <figure class="figure mb-4">
-                    <video class="figure-img px-md-4 img-fluid" controls>
-                        <source src="./img/forest.mp4" type="video/mp4">
-                        <source src="./img/forest.webm" type="video/webm">
-                        <track kind="descriptions" src="./img/descriptions.vtt" srclang="en" label="English">
-                    </video>
-                </figure>
             </div>
         </article>
     </main>
