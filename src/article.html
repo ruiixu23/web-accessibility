@@ -128,29 +128,41 @@
                         <p>The video cannot be played currently.
                             <a href="./video/forest.mp4">Click here to download the video.</a>
                         </p>
-                        <track kind="descriptions" src="./video/descriptions.vtt" srclang="en" label="English" default>
+                        <track kind="subtitles" src="./video/descriptions.vtt" srclang="en" label="English" default>
                     </video>
-                    <div class="d-flex flex-row d-none" id="video-controls">
-                        <div class="mx-1">
+                    <ul class="list-unstyled mb-1 d-flex flex-row d-none" id="video-controls">
+                        <li>
                             <button class="btn btn-sm btn-primary" id="video-play" type="button">Play</button>
-                        </div>
-                        <div class="w-100 mx-1">
-                            <progress class="video-progress w-100" id="video-progress" value="0" min="0" aria-label="Progress">
-                                <span class="video-progress-bar" id="video-progress-bar" aria-label="Progress"></span>
-                            </progress>
-                        </div>
-                        <div class="mx-1">
-                            <button class="btn btn-sm btn-primary" id="video-mute" type="button">Mute</button>
-                        </div>
-                        <div class="mx-1">
-                            <button class="btn btn-sm btn-primary" id="video-fullscreen" type="button">Fullscreen</button>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="w-100 mx-1">
+                            <div class="progress" id="video-progress">
+                                <div class="progress-bar" id="video-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progress"></div>
+                            </div>
+                        </li>
+                        <li class="mx-1 sr-only">
+                            <button class="btn btn-sm btn-primary" id="video-skip-ahead" type="button" aria-label="Skip ahead 10 seconds">Skip Ahead</button>
+                        </li>
+                        <li class="mx-1 sr-only">
+                            <button class="btn btn-sm btn-primary" id="video-go-back" type="button" aria-label="Go back 10 seconds">Go back</button>
+                        </li>
+                        <li class="mx-1">
+                            <input class="video-volume" type="range" id="video-volume" min="0" max="10" value="8" aria-label="Volume">
+                        </li>
+                        <li class="mx-1 sr-only">
+                            <button class="btn btn-sm btn-primary" id="video-mute" type="button" aria-label="Mute">Mute</button>
+                        </li>
+                        <li class="mx-1">
+                            <button class="btn btn-sm btn-primary" id="video-caption" type="button" aria-label="Caption on">CC On</button>
+                        </li>
+                        <li>
+                            <button class="btn btn-sm btn-primary" id="video-fullscreen" type="button" aria-label="Fullscreen">Fullscreen</button>
+                        </li>
+                    </ul>
 
-                <figcaption>&copy;
-                    <a href="https://www.rainforest-alliance.org/">Rainforest Alliance</a>
-                </figcaption>
-            </figure>
+                    <figcaption>&copy;
+                        <a href="https://www.rainforest-alliance.org/">Rainforest Alliance</a>
+                    </figcaption>
+                </figure>
             </div>
             <p>The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans through
                 various spans of time. The recently data published by NASA is one of the most detailed information exists
