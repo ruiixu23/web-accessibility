@@ -47,6 +47,14 @@ function setupCustomVideoControls() {
     let caption = document.getElementById('video-caption');
     let fullscreen = document.getElementById('video-fullscreen');
 
+    skipAhead.addEventListener('click', function(event) {
+        if (video.currentTime + 30 < video.duration) {
+            video.currentTime += 30;
+        } else {
+            video.currentTime = video.duration;
+        }
+    }, false);
+
     play.addEventListener('click', function(event) {
         if (video.paused || video.ended) {
             video.play();
@@ -56,6 +64,14 @@ function setupCustomVideoControls() {
             play.innerHTML = 'Play';
         }
         play.setAttribute('aria-label', play.innerHTML);
+    }, false);
+
+    goBack.addEventListener('click', function(event) {
+        if (video.currentTime - 10 > 0) {
+            video.currentTime -= 10;
+        } else {
+            video.currentTime = 0;
+        }
     }, false);
 
     video.addEventListener('click', function(event) {
@@ -77,22 +93,6 @@ function setupCustomVideoControls() {
         video.currentTime = (event.pageX - progress.offsetLeft) /
             progress.offsetWidth * video.duration;
     });
-
-    skipAhead.addEventListener('click', function(event) {
-        if (video.currentTime + 10 < video.duration) {
-            video.currentTime += 10;
-        } else {
-            video.currentTime = video.duration;
-        }
-    }, false);
-
-    goBack.addEventListener('click', function(event) {
-        if (video.currentTime - 10 > 0) {
-            video.currentTime -= 10;
-        } else {
-            video.currentTime = 0;
-        }
-    }, false);
 
     volume.addEventListener('change', function(event) {
         video.volume = volume.value / 10.0;
