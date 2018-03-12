@@ -37,11 +37,11 @@ function setupCustomVideoControls() {
     document.getElementById('video-controls').classList.remove('d-none');
     let videoContainer = document.getElementById('video-container');
     let video = document.getElementById('video-player');
+    let skipAhead = document.getElementById('video-skip-ahead');
     let play = document.getElementById('video-play');
+    let goBack = document.getElementById('video-go-back');
     let progress = document.getElementById('video-progress');
     let progressBar = document.getElementById('video-progress-bar');
-    let skipAhead = document.getElementById('video-skip-ahead');
-    let goBack = document.getElementById('video-go-back');
     let volume = document.getElementById('video-volume');
     let mute = document.getElementById('video-mute');
     let caption = document.getElementById('video-caption');
